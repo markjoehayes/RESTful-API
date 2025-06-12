@@ -1,0 +1,63 @@
+Differences Between HTTP and HTTPS
+-----------------------------------
+
+HTTP  - Hypertext transfer protocol
+HTTPS - HTTP with TLS or SSL encryption
+Encrypted or not - HTTP is an Application Layer (layer 7-OSI) client-server
+protocol used to transfer data over a network
+
+2 Types of HTTP messages:
+    1. requests - go to a server (or proxy caching server)
+    2. responses - the server will generate a an HTTP response
+
+HTTP will transfer traffic in plaintext format so that people watching traffic
+read what you are sending easily. HTTPS transfers encryptic traffic maiing
+safer connections.
+
+Besides the URL (http:// vs https://) most modern browsers will show a padlock
+in the address line that is either open (unlocked) for HTTP and closed (locked)
+for HTTPS.
+
+
+
+Structure of HTTP Request and Response
+---------------------------------------
+
+HTTP REQUEST             HTTP RESPONSE
+
++--------------+        +-------------+
+| Method       | -----> | Status Line |
++--------------+        +-------------+
+
++--------------+        +-------------+
+| Request-url  |        | Headers     |
++--------------+        +-------------+
+
++--------------+        +-------------+
+| Headers      |        |             |
++--------------+        |   Body      |
+                        |             |
++--------------+        |  (optional) |
+|  Body        |        |             |
+| (optional    | <----  |             |
++--------------+        +-------------+
+
+
+HTTP Request:
+    Method : The Http method (GET, POST, PUT, DELETE)
+    Request-url: The resource being requested (eg - HTTP/1.1)
+    HTTP-Version: The HTTP version (eg - 1.1)
+    Heasers: Key-value pairs providing meta-info (HOST, User-Agent)
+    Body: Data
+
+HTTP Response:
+    Status: Numeric code indicating result (200, 404, 500)
+            + Human readable phrase (OK, Not Found)
+    Headers:  Metadata about the Response (Content-Type, Content-Length)
+    Body: content (HTML, JSON, etc)
+                                              
+
+
+
+
+
