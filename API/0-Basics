@@ -11,7 +11,7 @@ protocol used to transfer data over a network
     2. responses - the server will generate a an HTTP response
 
 HTTP will transfer traffic in plaintext format so that people watching traffic
-read what you are sending easily. HTTPS transfers encryptic traffic maiing
+read what you are sending easily. HTTPS transfers encryptic traffic making
 safer connections.
 
 Besides the URL (http:// vs https://) most modern browsers will show a padlock
@@ -52,12 +52,62 @@ HTTP Request:
 
 HTTP Response:
     Status: Numeric code indicating result (200, 404, 500)
-            + Human readable phrase (OK, Not Found)
+            + Human readable phrase (OK, Not Found, Internal Server Error)
     Headers:  Metadata about the Response (Content-Type, Content-Length)
     Body: content (HTML, JSON, etc)
                                               
 
 
+Common HTTP Response Status Codes
+---------------------------------
+
+Informational response:
+    *100 Continue: The server recieved the request headers, client proceeds
+    *101 Switching Protocols: server agrees to client request to switch protocols
+
+Success Response:
+    *200 OK standard response for successful HTTP requests
+
+Redirection Responses: 
+    (indicates client must take additional action to complete a request)
+    *301 Moved Permanently
+    *302 Found
+    *303 See Other
+    *304 Not Modified
+
+Client Errors Response:
+    *400 Bad Request: client error prevents server from processing request
+    *404 Not Found
+    *408 Request Timeout
+    *413 Payload Too Large
+    *415 Unsupported Media Type: server does not support media-type
+    *429 Too Many Requests
+
+Server Errors:
+    *500 Internal Server Error: generic error message
 
 
+Common HTTP Request Methods
+----------------------------
+    Methods can be added in the future. If a method is unknown to an 
+    intermediate, it will be treated us unsafe (non-idempotent method)
 
+    Methods are case sensitive
+
+    *GET: requests the target resource transfers a representation of its state
+          Only retrieves data and has no other effect (makes no changes)
+
+    *HEAD: requests the target resource transfer a representation of its 
+           state, without data enclosed in response
+           (checking availability based on status code and finding size info)
+
+    *POST: request that the target process the reprsentation enclosed in 
+           the request
+           (posting in an internet forum, subscribing to a mailing list
+            completing an online shopping transaction)
+
+    *CONNECT: establish a TCP/IP tunnel to the original server identified 
+              by the request target
+              (used to secure connections)
+
+    *DELETE: requests the target resource delete its state 
