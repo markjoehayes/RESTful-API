@@ -1,9 +1,9 @@
-****************************************************************************************
-* Made a post request to the test site with the following command                      * 
-* l -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.com/posts*
-*                                                                                      *
-* Returns with an id of 101 (not unique, in this case) as this is a mock API for edu   *
-**************************************************************************************** 
+*******************************************************************************************
+* Made a post request to the test site with the following command                         * 
+* curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.com/posts*
+*                                                                                         *
+* Returns with an id of 101 (not unique, in this case) as this is a mock API for edu      *
+******************************************************************************************* 
 
 
 
