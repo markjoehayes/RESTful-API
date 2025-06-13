@@ -1,0 +1,29 @@
+****************************************************************************
+*  The followin output was retrieved with command:                         *
+*  curl -o 3-curl-haders_only -I https://jsonplaceholder.typicode.com/posts*
+****************************************************************************
+
+HTTP/2 200 
+date: Fri, 13 Jun 2025 10:40:26 GMT
+content-type: application/json; charset=utf-8
+access-control-allow-credentials: true
+cache-control: max-age=43200
+etag: W/"6b80-Ybsq/K6GwwqrYkAsFxqDXGC7DoM"
+expires: -1
+nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+pragma: no-cache
+report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=iDudU%2BOkT7J7UePxop8wIDq2mdvEFe0x%2Ftv68q2Kd0U%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1749682015"}],"max_age":3600}
+reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=iDudU%2BOkT7J7UePxop8wIDq2mdvEFe0x%2Ftv68q2Kd0U%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1749682015"
+server: cloudflare
+vary: Origin, Accept-Encoding
+via: 2.0 heroku-router
+x-content-type-options: nosniff
+x-powered-by: Express
+x-ratelimit-limit: 1000
+x-ratelimit-remaining: 999
+x-ratelimit-reset: 1749682047
+age: 12545
+cf-cache-status: HIT
+cf-ray: 94f0f848a9a84878-MIA
+alt-svc: h3=":443"; ma=86400
+
